@@ -10,19 +10,19 @@
 		<div class="grid">
 			<?php while(have_posts()) : the_post(); ?>
 				<article class="card">
-                <a class="card__titleLink" href="<?php the_permalink(); ?>">
                     <?php if( has_post_thumbnail() ): ?>
-                        <div class="duotone card__img">
+                        <div class="card__img">
                             <?php the_post_thumbnail('card'); ?>
                         </div>
                     <?php endif?>
             
-                    <div class="card_duotone">
+                    <div class="card_info">
                         <h3 class="card__title">
                             <?php the_title(); ?>      
                         </h3>
+                        <?php the_excerpt(); ?>
                     </div>
-                </a>
+                    <button><a href="<?php the_permalink(); ?>">Lire plus...</a></button>          
             </article>
 			<?php endwhile;
             endif;?> 

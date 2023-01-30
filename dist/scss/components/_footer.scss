@@ -1,0 +1,7 @@
+.footer{
+    background-color: $lightBlue;
+    &_list{
+        display: flex;
+        gap: 40px;
+    }
+}

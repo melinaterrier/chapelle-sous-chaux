@@ -75,6 +75,8 @@ function montheme_scripts_styles() {
     '1.0'
 );
 
+wp_enqueue_script( 'script', get_template_directory_uri() . '/dist/js/script.js', array(), '', true );
+
 }
 
 /**
@@ -88,5 +90,6 @@ function register_my_menu(){
   ) );
   }
 
+  require_once get_template_directory() . '/inc/plugins/acf.php';
 
   

@@ -2,12 +2,16 @@
 
 <?php if (have_posts()) : ?>
    <?php while (have_posts()) : the_post(); ?>
-       <article class="article">
-           <div class="text">
-            <h1 class="title">
+       <article class="actu">
+       <div class="actu_img">
+                <?php the_post_thumbnail(); ?>
+            </div>
+           <div class="actu_text">
+            <h1 class="actu_title">
                 <?php the_title(); ?>
-            </h1>           
-            <div class="content">
+            </h1>  
+
+            <div class="actu_content">
                 <?php the_content(); ?>
             </div>
            </div>

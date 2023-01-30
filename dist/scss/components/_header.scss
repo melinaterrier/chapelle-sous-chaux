@@ -1,46 +1,41 @@
 .header{
     display: flex;
+    margin: 25px;
     justify-content: space-between;
+    &__logo>img{
+        width: 181px;
+    }
     &_menu{
         a{
-            font-family: 'Alata';
             text-transform: uppercase;
-            transition: 0.5s;
-            position: relative;
-        &::after{
-            position: absolute;
-            content: "";
-            width: 100%;
-            height: 2px;
-            top: 100%;
-            left: 0;
-            background: #023047;
-            transition: transform 0.5s;
-            transform: scaleX(0);
-            transform-origin: right;
-        }
-
-        &:hover::after{
-            transform: scaleX(1);
-            transform-origin: left;
-        }
-    }
+            color: $grey;
+            font-family: 'Alata';
+            font-size: 14px;
         }
         display: flex;
-        gap: 40px;
+        gap: 50px;
+        align-items: center;
+        height: fit-content;
+
         &__list{
             display: flex;
-            gap: 30px;
+            gap: 50px;
             text-align: end;
             .sub-menu{
-                display: block;
-                left: -999em;
-                margin: 0;
+                display: none;
+                z-index: 10;
                 position: absolute;
-                z-index: 99999;
+                padding: 0;
                 border-top: 1px solid #fff;
                 background: #fff;
                 box-shadow: 0 0 30px #7b6a6a4d;
+                a{
+                    width: 100%;
+                    text-align: left;
+                    width: 220px;
+                    display: block;
+                    padding: 10px 20px;
+                }
             }
         }
     }
@@ -49,10 +44,49 @@
         background-color: transparent;
         border: none;
         cursor: pointer;
+        &>path{
+            stroke: $grey;
+        }
+    }
+}
+
+.menu-item-has-children{
+    position: relative;
+    &:hover .sub-menu{
+        display: block;
     }
 }
 
 .searchForm {
+    background: #fff;
     display: none;
-    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 64px;
+    padding: 25px 30px 25px;
+    z-index: 9;
+    box-shadow: 0 0 6px #00000036;
+    &__form{
+        display: flex;
+        width: 400px;
+    }
+    &__input{
+        width: 100%;
+        border: 2px solid #f7f7f7;
+        padding: 12px 25px;
+    }
+    &__submit{
+        background-color: $red;
+        color: #fff;
+        font-size: 14px;
+        line-height: 1.5;
+        padding: 10px 35px;
+        border: none;
+        height: auto;
+        width: auto;
+        cursor: pointer;
+    }
+    &.-active{
+        display: block;
+    }
 }
