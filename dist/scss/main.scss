@@ -1,0 +1,30 @@
+@import './components/header';
+@import './fundations/variable';
+
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+p, a, ul>li{
+    font-size: 16px;
+    font-family: 'Roboto';
+    line-height: 24px;
+    text-decoration: none;
+    color: $black;
+    list-style: none;
+}
+h1, h2, h3{
+    font-family: 'Alata';
+}
+h1{
+    font-size: 30px;
+}
+h2{
+    font-size: 25px;
+}
+h3{
+    font-size: 20px;
+}

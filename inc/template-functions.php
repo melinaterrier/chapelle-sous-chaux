@@ -36,8 +36,8 @@ function montheme_setup() {
    * @link https://developer.wordpress.org/themes/functionality/custom-logo/
    */
   add_theme_support( 'custom-logo', array(
-    'height'      => 250,
-    'width'       => 250,
+    'height'      => 1532,
+    'width'       => 1532,
     'flex-width'  => true,
     'flex-height' => true,
   ) );
@@ -53,13 +53,6 @@ function montheme_setup() {
    */
   // permet la prise en charge des extraits.
   add_post_type_support( 'page', 'excerpt' );
-
-  /**
-   * La fonction add_image_size peprmet de définir de nouvelles tailles d'image
-   * @link https://developer.wordpress.org/reference/functions/add_image_size/
-   */
-  add_image_size( 'card', 268, 268, true);
-  add_image_size( 'large', 1280, 495, true);
 
 }
 

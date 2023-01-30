@@ -1,0 +1,78 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header_menu {
+  display: flex;
+  gap: 40px;
+}
+.header_menu a {
+  font-family: "Alata";
+  text-transform: uppercase;
+}
+.header_menu__list {
+  display: flex;
+  gap: 30px;
+  text-align: end;
+}
+.header_menu__list .sub-menu {
+  display: block;
+  left: -999em;
+  margin: 0;
+  position: absolute;
+  z-index: 99999;
+  border-top: 1px solid #fff;
+  background: #fff;
+  box-shadow: 0 0 30px rgba(123, 106, 106, 0.3019607843);
+}
+.header__search {
+  visibility: visible;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.searchForm {
+  display: none;
+  opacity: 0;
+}
+
+/* Importation des polices */
+@font-face {
+  font-family: "Alata";
+  src: url("../font/Alata-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../font/Roboto-Regular.ttf");
+}
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+p, a, ul > li {
+  font-size: 16px;
+  font-family: "Roboto";
+  line-height: 24px;
+  text-decoration: none;
+  color: #0E131F;
+  list-style: none;
+}
+
+h1, h2, h3 {
+  font-family: "Alata";
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+h3 {
+  font-size: 20px;
+}/*# sourceMappingURL=main.css.map */

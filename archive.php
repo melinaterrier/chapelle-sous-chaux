@@ -2,23 +2,31 @@
 
 <div class="archive_header">
 	<?php post_type_archive_title( '<h1 class="archive_header_title">', '</h1>' ); ?>
-	<svg class="archive_header_separator" width="1000" height="2" viewBox="0 0 1000 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-		<line x1="1" y1="1" x2="1000" y2="0.999913" stroke="#AEC2BD" stroke-width="2" stroke-linecap="round"/>
-	</svg>
 </div>
 
 
 <?php
 	if(have_posts()) : ?>
 		<div class="grid">
-			<?php while(have_posts()) : the_post(); 
-				get_template_part('template-parts/card', 'card');
-			endwhile;?>  
+			<?php while(have_posts()) : the_post(); ?>
+				<article class="card">
+                <a class="card__titleLink" href="<?php the_permalink(); ?>">
+                    <?php if( has_post_thumbnail() ): ?>
+                        <div class="duotone card__img">
+                            <?php the_post_thumbnail('card'); ?>
+                        </div>
+                    <?php endif?>
+            
+                    <div class="card_duotone">
+                        <h3 class="card__title">
+                            <?php the_title(); ?>      
+                        </h3>
+                    </div>
+                </a>
+            </article>
+			<?php endwhile;
+            endif;?> 
 		</div>
 		<?php	
 		the_posts_pagination(); 
-		else :
-			get_template_part( 'template-parts/content', 'none' );
-		endif;
-	?>
-<?php get_footer(); ?>
+ get_footer(); ?>
