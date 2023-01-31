@@ -5,6 +5,7 @@ get_header();?>
 <?php while (have_posts()) : the_post(); ?>
 <div class="post">
 <div class="post-content">
+
 <?php the_content(); 
 
 if ( is_front_page() ) {?>
@@ -20,25 +21,17 @@ if ( is_front_page() ) {?>
                     while(have_posts()) : the_post(); ?>
                     <article class="card">
     <?php if( has_post_thumbnail() ): ?>
-        <div class="duotone card__img">
-        <?php the_post_thumbnail( 'large' ); ?>
+        <div class="card__img">
+            <?php the_post_thumbnail(); ?>
         </div>
     <?php endif; ?>
-    <h3 class="card__title">
-        <a class="card__titleLink" href="<?php the_permalink(); ?>">
-        <?php the_title(); ?>      
-        </a>
-    </h3>
-    <div class="card__caption">
-        <?php if( get_field('date') ): ?>
-        <p class="card__date"><?php echo $date; ?></p>
-        <?php endif; ?>
-        <?php if( has_excerpt() ): ?>
-        <p class="card__excerpt"><?php echo get_the_excerpt(); ?></p>
-        <?php endif; ?>
-        <a class="card__link morelink" href="<?php the_permalink(); ?>">
-        <?php echo esc_html__( "Plus d'info", 'text-domain' )?>
-        </a>
+    
+    <div class="card_info">
+        <h3 class="card__title">
+            <?php the_title(); ?>      
+        </h3>
+        <?php the_excerpt(); ?>
+        <a class="card__link" href="<?php the_permalink(); ?>">Lire plus...</a>
     </div>
         </article>
         <?php
@@ -74,9 +67,54 @@ if ( is_front_page() ) {?>
         <?php endif; ?>
 
     </section>
-    <?php }?>
+    <?php }
 
-<?php 
+if (is_page( 'Service de l\'état' ) ) {?>
+    <section>
+    <?php if( have_rows( 'stat_services' ) ): ?>
+        <ul class="services_list">
+            <?php while(have_rows('stat_services')): the_row();
+            $name = get_sub_field('service_name');
+            $link_text = get_sub_field('service_link_text');
+            $url = get_sub_field('service_link');
+            $text = get_sub_field('service_text');
+            ?>
+            <li>
+            <h3><?php echo $name ?></h3>
+            <p><?php echo $text ?></p>
+            <a href="<?php echo $url; ?>" aria-label=" <?php echo $reseau_social; ?>">
+                <?php echo $link_text?>
+            </a>
+            </li>
+            <?php endwhile; ?>
+        </ul>
+        <?php endif; ?>
+
+    </section> <?php
+}
+
+if (is_page( 'Liste des démarches' ) ) {?>
+    <section>
+    <?php if( have_rows( 'demarche' ) ): ?>
+        <ul class="demarche_list">
+            <?php while(have_rows('demarche')): the_row();
+            $title = get_sub_field('demarche_title');
+            $url = get_sub_field('demarche_link');
+            $icon = get_sub_field('demarche_icon');
+            ?>
+            <li>
+            <a href="<?php echo $url; ?>" aria-label=" <?php echo $reseau_social; ?>">
+                <h3><?php echo $title ?></h3>
+               <img src="<?php echo $icon['url'] ?>">
+            </a>
+            </li>
+            <?php endwhile; ?>
+        </ul>
+        <?php endif; ?>
+
+    </section> <?php
+}
+
 endwhile;
 endif;
 get_footer();

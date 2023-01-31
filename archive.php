@@ -12,7 +12,7 @@
 				<article class="card">
                     <?php if( has_post_thumbnail() ): ?>
                         <div class="card__img">
-                            <?php the_post_thumbnail('card'); ?>
+                            <?php the_post_thumbnail(); ?>
                         </div>
                     <?php endif?>
             
@@ -21,8 +21,8 @@
                             <?php the_title(); ?>      
                         </h3>
                         <?php the_excerpt(); ?>
+                        <a href="<?php the_permalink(); ?>"><button class="card__button">Lire plus...</button></a>
                     </div>
-                    <button><a href="<?php the_permalink(); ?>">Lire plus...</a></button>          
             </article>
 			<?php endwhile;
             endif;?> 

@@ -53,6 +53,10 @@ function montheme_setup() {
    */
   // permet la prise en charge des extraits.
   add_post_type_support( 'page', 'excerpt' );
+  function custom_excerpt_length( $length ) {
+    return 15;
+  }
+  add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 }
 
