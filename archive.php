@@ -7,9 +7,9 @@
 
 <?php
 	if(have_posts()) : ?>
-		<div class="grid">
+		<div class="grid -archive">
 			<?php while(have_posts()) : the_post(); ?>
-				<article class="card">
+				<article class="card -archive">
                     <?php if( has_post_thumbnail() ): ?>
                         <div class="card__img">
                             <?php the_post_thumbnail(); ?>

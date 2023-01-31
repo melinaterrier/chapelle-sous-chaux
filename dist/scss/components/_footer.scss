@@ -1,7 +1,8 @@
 .footer{
-    background-color: $lightBlue;
+    background-color: $light;
     &_list{
         display: flex;
         gap: 40px;
+        margin: 0;
     }
 }

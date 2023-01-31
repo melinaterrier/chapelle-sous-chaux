@@ -1,15 +1,14 @@
-h1, h2, h3{
+h1, h2, h3, h4{
   font-family: 'Alata';
   color: $grey;
 }
 
 h1{
     font-size: 30px;
-    border-bottom: 5px solid $red;
+    border-bottom: 5px solid $green;
     width: fit-content;
     padding-right: 20px;
-    margin-left: 100px;
-    margin-top: 50px;
+    margin: 50px 0 0 100px;
 }
 
 h2{
@@ -20,11 +19,15 @@ h2{
       display: block;
       width: 50px;
       height: 5px;
-      margin: 2px;
-      background-color: $red;
+      margin-top: 2px;
+      background-color: $blue;
     }
 }
 
 h3{
     font-size: 20px;
+}
+
+h4{
+  font-size: 18px;
 }

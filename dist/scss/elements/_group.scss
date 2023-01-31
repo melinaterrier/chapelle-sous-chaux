@@ -1,22 +1,42 @@
 .demarche_info{
-    text-align: center;
-    margin: 20px 0;
-    p{
-        margin: 0;
+    width: 100vw;
+    margin : 0 auto;
+    &>div{
+        text-align: center;
+        width: 100%;
+        display : table;
+        margin : 40px auto;
+        padding: 20px;
+        background-color: $light;
+        &>p{
+            margin-bottom: 0;
+            margin-top: 0;
+            &:first-of-type{
+                margin-bottom: 10px;
+            }
+            &:last-of-type{
+                margin-top: 20px;
+                a{
+                    color: $red;
+                    text-decoration: underline;
+                }
+            }
+        }
     }
+    width: 30vw;
 }
 
 .wp-block-file{
     display: flex;
-    width: 50vw;
+    max-width: 30vw;
+    height: 0;
+    position: relative;
     align-items: center;
-    background-color: $lightBlue;
+    background-color: $light;
     padding: 20px;
-    a{
-        color: white;
-    }
     &__button{
-        justify-content: end;
+        position: absolute;
+        right: 0;
     }
 }
 
@@ -42,10 +62,11 @@
     }
     &_img{
         width: 40%;
+        align-items: center;
     }
 }
 
 #ez-toc-container{
     border: none !important;
-    border-right: 5px solid $red !important;
+    border-left: 5px solid $blue !important;
 }

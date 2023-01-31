@@ -71,19 +71,19 @@ get_header();?>
     <?php }
 
 if (is_page( 'Service de l\'état' ) ) {?>
-    <section>
+    <section class="services">
     <?php if( have_rows( 'stat_services' ) ): ?>
-        <ul class="services_list">
+        <ul class="grid services_list">
             <?php while(have_rows('stat_services')): the_row();
             $name = get_sub_field('service_name');
             $link_text = get_sub_field('service_link_text');
             $url = get_sub_field('service_link');
             $text = get_sub_field('service_text');
             ?>
-            <li>
-            <h3><?php echo $name ?></h3>
-            <p><?php echo $text ?></p>
-            <a href="<?php echo $url; ?>" aria-label=" <?php echo $reseau_social; ?>">
+            <li class="card -service">
+            <h3 class="service_title"><?php echo $name ?></h3>
+            <p class="service_text"><?php echo $text ?></p>
+            <a class="service_link" href="<?php echo $url; ?>" aria-label=" <?php echo $reseau_social; ?>">
                 <?php echo $link_text?>
             </a>
             </li>

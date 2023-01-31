@@ -1,13 +1,12 @@
 .card{
-    background-color: $black;
-    display: flex;
-    gap: 20px;
-    width: 40vw;
-    align-items: center;
-    padding: 20px;
-    p, h3{
-        color: white;
+    background-color: $light;
+    &.-archive{
+        display: flex;
+        gap: 20px;  
     }
+    width: 40vw;
+    padding: 20px;
+    align-items: center;
     &__img{
         &>img{
         max-width: 20vw;
@@ -30,6 +29,9 @@
 .grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 5vw 5vh;
     gap: 5vh;
+    .-archive{
+        padding: 5vw 5vh;
+    }
 }
+
