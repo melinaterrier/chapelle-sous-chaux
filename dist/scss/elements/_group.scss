@@ -1,3 +1,51 @@
 .demarche_info{
     text-align: center;
+    margin: 20px 0;
+    p{
+        margin: 0;
+    }
+}
+
+.wp-block-file{
+    display: flex;
+    width: 50vw;
+    align-items: center;
+    background-color: $lightBlue;
+    padding: 20px;
+    a{
+        color: white;
+    }
+    &__button{
+        justify-content: end;
+    }
+}
+
+.demarche{
+    margin: 40px;
+    &_list{
+        display: flex;
+        gap: 20px;
+        &>li{
+            list-style: none;
+            &:hover h3, &:hover img{
+                color: $red;
+            }
+        }
+    }
+    &_link{
+        display: grid;
+        grid-template-rows: 50px 1fr;
+        grid-gap: 20px;
+    }
+    &_title{
+        margin: 0;
+    }
+    &_img{
+        width: 40%;
+    }
+}
+
+#ez-toc-container{
+    border: none !important;
+    border-right: 5px solid $red !important;
 }

@@ -29,18 +29,17 @@ img{
 }
 .post{
     padding: 10px 50px 20px 50px;
-    display: flex;
     max-width: 80vw;
-    ul{
+    &-content>ul{
         padding-left: 70px;
         li{
             list-style: initial;
         } 
     }
-    p, ul, li{
+    p{
         margin-bottom: 15px;
     }
-    a{
+    &-content>p>a{
         color: $red;
         text-decoration: underline;
     }

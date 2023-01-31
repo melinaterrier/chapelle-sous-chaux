@@ -6,9 +6,10 @@ get_header();?>
 <div class="post">
 <div class="post-content">
 
-<?php the_content(); 
+<?php the_content(); ?>
+</div>
 
-if ( is_front_page() ) {?>
+<?php if ( is_front_page() ) {?>
     <section class="grid -withHeader section">
                 <?php
                     $args = array(
@@ -94,7 +95,7 @@ if (is_page( 'Service de l\'état' ) ) {?>
 }
 
 if (is_page( 'Liste des démarches' ) ) {?>
-    <section>
+    <section class="demarche">
     <?php if( have_rows( 'demarche' ) ): ?>
         <ul class="demarche_list">
             <?php while(have_rows('demarche')): the_row();
@@ -103,9 +104,9 @@ if (is_page( 'Liste des démarches' ) ) {?>
             $icon = get_sub_field('demarche_icon');
             ?>
             <li>
-            <a href="<?php echo $url; ?>" aria-label=" <?php echo $reseau_social; ?>">
-                <h3><?php echo $title ?></h3>
-               <img src="<?php echo $icon['url'] ?>">
+            <a class="demarche_link" href="<?php echo $url; ?>" aria-label=" <?php echo $reseau_social; ?>">
+               <img class="demarche_img" src="<?php echo $icon['url'] ?>">
+               <h3 class="demarche_title"><?php echo $title ?></h3>
             </a>
             </li>
             <?php endwhile; ?>
@@ -113,8 +114,9 @@ if (is_page( 'Liste des démarches' ) ) {?>
         <?php endif; ?>
 
     </section> <?php
-}
-
+}?>
+</div>
+<?php
 endwhile;
 endif;
 get_footer();

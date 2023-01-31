@@ -106,7 +106,7 @@
   gap: 40px;
 }
 
-input[type=submit], button, .card__link {
+input[type=submit], button, .card__link, .wp-block-file__button {
   background-color: #ED6A5A;
   color: #fff;
   font-size: 14px;
@@ -116,6 +116,7 @@ input[type=submit], button, .card__link {
   height: auto;
   width: auto;
   cursor: pointer;
+  border-radius: 0;
 }
 
 .card {
@@ -189,6 +190,54 @@ h3 {
 
 .demarche_info {
   text-align: center;
+  margin: 20px 0;
+}
+.demarche_info p {
+  margin: 0;
+}
+
+.wp-block-file {
+  display: flex;
+  width: 50vw;
+  align-items: center;
+  background-color: #9BC1BC;
+  padding: 20px;
+}
+.wp-block-file a {
+  color: white;
+}
+.wp-block-file__button {
+  justify-content: end;
+}
+
+.demarche {
+  margin: 40px;
+}
+.demarche_list {
+  display: flex;
+  gap: 20px;
+}
+.demarche_list > li {
+  list-style: none;
+}
+.demarche_list > li:hover h3, .demarche_list > li:hover img {
+  color: #ED6A5A;
+}
+.demarche_link {
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-gap: 20px;
+}
+.demarche_title {
+  margin: 0;
+}
+.demarche_img {
+  width: 40%;
+}
+
+#ez-toc-container {
+  border: none !important;
+  border-right: 5px solid #ED6A5A !important;
 }
 
 body {
@@ -213,19 +262,18 @@ img {
 
 .post {
   padding: 10px 50px 20px 50px;
-  display: flex;
   max-width: 80vw;
 }
-.post ul {
+.post-content > ul {
   padding-left: 70px;
 }
-.post ul li {
+.post-content > ul li {
   list-style: initial;
 }
-.post p, .post ul, .post li {
+.post p {
   margin-bottom: 15px;
 }
-.post a {
+.post-content > p > a {
   color: #ED6A5A;
   text-decoration: underline;
 }/*# sourceMappingURL=main.css.map */

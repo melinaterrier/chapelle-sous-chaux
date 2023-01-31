@@ -1,4 +1,4 @@
-input[type="submit"], button, .card__link{
+input[type="submit"], button, .card__link, .wp-block-file__button{
         background-color: $red;
         color: #fff;
         font-size: 14px;
@@ -8,4 +8,5 @@ input[type="submit"], button, .card__link{
         height: auto;
         width: auto;
         cursor: pointer;
+        border-radius: 0;
 }
