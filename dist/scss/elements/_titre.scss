@@ -1,4 +1,4 @@
-h1, h2, h3, h4, .tribe-common h1, .single-tribe_events .tribe-blocks-editor .tribe-events-single-event-title, .tribe-common .tribe-common-h7, .single-tribe_events #tribe-events-content.tribe-blocks-editor .tribe-events-event-meta .tribe-events-single-section-title, .single-tribe_events #tribe-events-content .tribe-events-event-meta dt, .tribe-block__venue .tribe-block__venue__meta .tribe-block__venue__name h3, .single-tribe_events .tribe-blocks-editor .tribe-events-schedule .tribe-events-schedule__datetime{
+h1, h2, h3, h4, .tribe-common h1, .tribe-common--breakpoint-medium.tribe-common .tribe-common-h6, .single-tribe_events .tribe-blocks-editor .tribe-events-single-event-title, .tribe-common .tribe-common-h7, .single-tribe_events #tribe-events-content.tribe-blocks-editor .tribe-events-event-meta .tribe-events-single-section-title, .single-tribe_events #tribe-events-content .tribe-events-event-meta dt, .tribe-block__venue .tribe-block__venue__meta .tribe-block__venue__name h3, .single-tribe_events .tribe-blocks-editor .tribe-events-schedule .tribe-events-schedule__datetime, .tribe-common--breakpoint-medium.tribe-common .tribe-common-h6{
   font-family: 'Alata';
   color: $grey;
   font-weight: 600;
@@ -12,7 +12,7 @@ h1, .tribe-common h1, .single-tribe_events .tribe-blocks-editor .tribe-events-si
     margin: 50px 0 0 100px;
 }
 
-h2, .tribe-common .tribe-common-h7, .single-tribe_events #tribe-events-content.tribe-blocks-editor .tribe-events-event-meta .tribe-events-single-section-title{
+h2, .tribe-common .tribe-common-h7, .single-tribe_events #tribe-events-content.tribe-blocks-editor .tribe-events-event-meta .tribe-events-single-section-title, .tribe-common--breakpoint-medium.tribe-common .tribe-common-h6{
     font-size: 25px;
     margin-top: 45px;
     &::after {

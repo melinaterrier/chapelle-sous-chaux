@@ -9,6 +9,7 @@
 @import './components/events';
 @import './components/service';
 @import './elements/img';
+@import './components/form';
 
 body{
     box-sizing: border-box;
@@ -16,8 +17,7 @@ body{
     margin: 0;
 }
 
-
-p, a, ul>li, .tribe-common .tribe-common-b2, .tribe-events-back a, .tribe-events-back a:visited, .tribe-events-schedule h2, .tribe-block__venue, .single-tribe_events #tribe-events-content.tribe-blocks-editor .tribe-events-event-meta dl{
+p, a, ul>li, .tribe-common .tribe-common-b2, .tribe-common span, .tribe-events-back a, .tribe-events-back a:visited, .tribe-events-schedule h2, .tribe-block__venue, .single-tribe_events #tribe-events-content.tribe-blocks-editor .tribe-events-event-meta dl{
     font-size: 16px;
     font-family: 'Roboto';
     line-height: 24px;
@@ -34,6 +34,7 @@ img{
     height: auto;
 }
 .post{
+    min-height: 43vh;
     padding: 10px 50px 20px 50px;
     max-width: 80vw;
     &-content>ul{

@@ -7,9 +7,6 @@ get_header();?>
 
 <?php the_content(); ?>
 </div>
-
-
-
     <section class="actu">
                 <?php
                     $args = array(
@@ -20,7 +17,7 @@ get_header();?>
 
                     if(have_posts()) :?>
                         <h1>Actualités</h1>
-                        <section class="grid -archive_grid">
+                        <section class="grid -archive_grid -front">
                     <?php while(have_posts()) : the_post(); ?>
                     <article class="card -archive">
     <?php if( has_post_thumbnail() ): ?>
@@ -43,6 +40,7 @@ get_header();?>
 
                     endwhile;?>
                     </section>
+                    <a class="actu_link" href="http://localhost/chapelle/actualite/">Voir toutes les actualités</a>
                     <?php
                     endif;
                     /**
@@ -71,13 +69,11 @@ get_header();?>
                     <?php endwhile; ?>
                 </ul>
                 <?php endif; ?>
-
     </section>
     <?php 
     
 endwhile;
 endif;
-
 
 get_footer();
 

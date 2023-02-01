@@ -49,6 +49,9 @@
     &.-services_list{
         padding: 0;
     }
+    &.-front{
+        padding: 5vh 4vw 0 4vw ;
+    }
 }
 
 .services ul{
@@ -70,4 +73,12 @@
         color: $red;
         text-decoration: underline;
     }
+}
+
+.actu_link{
+    display: flex;
+    justify-content: center;
+    color: $red;
+    text-decoration: underline;
+    margin-top: 30px;
 }

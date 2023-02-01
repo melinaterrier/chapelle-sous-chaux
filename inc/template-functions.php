@@ -94,6 +94,5 @@ function register_my_menu(){
   ) );
   }
 
-  require_once get_template_directory() . '/inc/plugins/acf.php';
 
   

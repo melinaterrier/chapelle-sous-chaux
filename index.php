@@ -11,7 +11,7 @@ get_header();?>
 
 
 <?php
-if (is_page( 'Service de l\'état' ) ) {?>
+if (is_page( 'Services de l\'état' ) ) {?>
     <section class="services">
     <?php if( have_rows( 'stat_services' ) ): ?>
         <ul class="grid services_list">
