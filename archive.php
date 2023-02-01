@@ -7,7 +7,7 @@
 
 <?php
 	if(have_posts()) : ?>
-		<div class="grid -archive">
+		<div class="grid -archive_grid">
 			<?php while(have_posts()) : the_post(); ?>
 				<article class="card -archive">
                     <?php if( has_post_thumbnail() ): ?>
@@ -21,7 +21,7 @@
                             <?php the_title(); ?>      
                         </h3>
                         <?php the_excerpt(); ?>
-                        <a href="<?php the_permalink(); ?>"><button class="card__button">Lire plus...</button></a>
+                        <a class="card_link" href="<?php the_permalink(); ?>"><button class="card__button">Lire plus...</button></a>
                     </div>
             </article>
 			<?php endwhile;
