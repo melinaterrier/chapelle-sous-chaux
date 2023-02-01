@@ -14,3 +14,9 @@ add_action( 'init', 'register_my_menu' );
 
 // File d'attente des styles et des scripts
 add_action( 'wp_enqueue_scripts', 'montheme_scripts_styles' );
+
+function my_acf_google_map_api( $api ){
+    $api['key'] = 'xxx';
+    return $api;
+}
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');

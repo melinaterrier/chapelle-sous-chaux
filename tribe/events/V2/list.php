@@ -62,6 +62,10 @@ if ( empty( $disable_event_search ) ) {
 
 		<?php $this->template( 'components/filter-bar' ); ?>
 
+		<div class="archive_header">
+			<h1>Les événements à venir</h1>
+		</div>
+
 		<div class="tribe-events-calendar-list">
 
 			<?php foreach ( $events as $event ) : ?>

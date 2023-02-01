@@ -20,7 +20,9 @@
                         <h3 class="card__title">
                             <?php the_title(); ?>      
                         </h3>
-                        <?php the_excerpt(); ?>
+                        <?php if( has_excerpt() ): ?>
+                            <p class="card__excerpt"><?php echo get_the_excerpt(); ?></p>
+                        <?php endif; ?>
                         <a class="card_link" href="<?php the_permalink(); ?>"><button class="card__button">Lire plus...</button></a>
                     </div>
             </article>

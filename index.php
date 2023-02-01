@@ -9,67 +9,8 @@ get_header();?>
 <?php the_content(); ?>
 </div>
 
-<?php if ( is_front_page() ) {?>
-    <section class="grid -withHeader section">
-                <?php
-                    $args = array(
-                        'post_type' => 'actualite',
-                        'posts_per_page' => 3,
-                    );
-                    query_posts( $args );
 
-                    if(have_posts()) :
-                    while(have_posts()) : the_post(); ?>
-                    <article class="card">
-    <?php if( has_post_thumbnail() ): ?>
-        <div class="card__img">
-            <?php the_post_thumbnail(); ?>
-        </div>
-    <?php endif; ?>
-    
-    <div class="card_info">
-        <h3 class="card__title">
-            <?php the_title(); ?>      
-        </h3>
-        <?php the_excerpt(); ?>
-        <a class="card__link" href="<?php the_permalink(); ?>">Lire plus...</a>
-    </div>
-        </article>
-        <?php
-
-                    endwhile;
-                    endif;
-                    /**
-                     * Détruit la requête précédente et configure une nouvelle requête.
-                     * @link https://developer.wordpress.org/reference/functions/wp_reset_query/
-                     */
-                    wp_reset_query();
-                ?>
-    </section>
-
-
-    <section>
-    <?php if( have_rows( 'services' ) ): ?>
-        <h2 class="services_title">Nos services</h2>
-        <ul class="services_list">
-            <?php while(have_rows('services')): the_row();
-            $title = get_sub_field('service_title');
-            $img = get_sub_field('service_image');
-            $url = get_sub_field('service_link');
-            ?>
-            <li>
-            <a href="<?php echo $url; ?>" aria-label=" <?php echo $reseau_social; ?>">
-                <h3><?php echo $title ?></h3>
-                <img src="<?php echo $img['url'] ?>">
-            </a>
-            </li>
-            <?php endwhile; ?>
-        </ul>
-        <?php endif; ?>
-
-    </section>
-    <?php }
-
+<?php
 if (is_page( 'Service de l\'état' ) ) {?>
     <section class="services">
     <?php if( have_rows( 'stat_services' ) ): ?>

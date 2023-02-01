@@ -1,8 +1,22 @@
 .footer{
-    background-color: $light;
+    background-color: $blue;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
     &_list{
         display: flex;
         gap: 40px;
+        color: white;
         margin: 0;
+        .menu-item>a{
+            color: white;
+            &:hover{
+                color: $light;
+            }
+        }
+    }
+    &_right>p{
+        color: white;
     }
 }

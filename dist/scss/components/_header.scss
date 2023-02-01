@@ -11,11 +11,13 @@
             color: $grey;
             font-family: 'Alata';
             font-size: 14px;
+            &:hover{
+                color:$green;
+            }
         }
         display: flex;
         gap: 50px;
         align-items: center;
-        // height: fit-content;
 
         &__list{
             display: flex;
@@ -39,14 +41,21 @@
             }
         }
     }
-    &__search {
+    &__search{
         visibility: visible;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        &>path{
-            stroke: $grey;
-        }
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    &.-active{
+        display: none;
+    }
+    &.-icon{
+      width: 26px;
+      height: 26px;
+    }
+    &:hover>path{
+        stroke: $green;
+    }
     }
 }
 
@@ -58,35 +67,46 @@
 }
 
 .searchForm {
-    background: #fff;
     display: none;
-    position: absolute;
-    right: 0;
-    top: 64px;
-    padding: 25px 30px 25px;
-    z-index: 9;
-    box-shadow: 0 0 6px #00000036;
-    &__form{
+    transform: translateX(30px);
+    transition: all .4s ease-in-out;
+    opacity: 0;
+    &.-open{
         display: flex;
-        width: 400px;
+        opacity: 1;
+        align-items: center;
+        flex-direction: row;
+        position: relative;
+        transform: translateX(0);
+    }
+    &__close, &__submit {
+      appearance: none;
+      background: inherit;
+      border: none;
     }
     &__input{
-        width: 100%;
-        border: 2px solid #f7f7f7;
-        padding: 12px 25px;
-    }
-    &__submit{
-        background-color: $red;
-        color: #fff;
-        font-size: 14px;
-        line-height: 1.5;
-        padding: 10px 35px;
+        background: none;
         border: none;
-        height: auto;
-        width: auto;
-        cursor: pointer;
+        border: 2px solid $black;
+        border-radius: 40px;
+        height: 33px;
+        width: 240px;
+        padding: 0 15px;
+        &:focus{
+            border-color: $black;
+            outline: none;
+        }
     }
-    &.-active{
-        display: block;
+    &__close, &__submit{
+        cursor: pointer;
+        &__icon{
+            width: 26px;
+            height: 26px;
+        }
+    }
+    &__form{
+        display: flex;
+        align-items: center;
+        gap: 1px;
     }
 }

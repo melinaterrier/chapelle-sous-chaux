@@ -12,6 +12,9 @@
         ) ); ?>
     </nav>
   </div>
+  <div class="footer_right">
+    <p>© 2020 Copyright Mairie de Lachapelle-sous-Chaux - Tous droits réservés</p>
+  </div> 
 
 </footer>
 
