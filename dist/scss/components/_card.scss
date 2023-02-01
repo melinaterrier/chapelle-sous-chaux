@@ -1,27 +1,29 @@
 .card{
     background-color: $light;
+    height: 50vh;
     &.-archive{
         display: flex;
         gap: 20px;  
     }
-    width: 40vw;
-    padding: 20px;
-    align-items: center;
+    width: 45vw;
     &__img{
         &>img{
-        max-width: 20vw;
-        max-height: 40vh;
+        max-width: 18vw;
+        height: 50vh;
         object-fit: cover;
     }}
     &__title{
         margin: 0;
     }
-    &__link{
-        display: flex;
-        justify-content: center;
+    &_link{
+        margin-top: 20px;
+
     }
     &_info{
         display: flex;
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
     }
 }
@@ -30,8 +32,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5vh;
-    .-archive{
-        padding: 5vw 5vh;
+    &.-archive_grid{
+        padding: 4vw 5vh;
     }
 }
 

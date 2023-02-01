@@ -122,29 +122,30 @@ input[type=submit], button, .card__link, .wp-block-file__button {
 
 .card {
   background-color: #EFEFF0;
-  width: 40vw;
-  padding: 20px;
-  align-items: center;
+  height: 50vh;
+  width: 45vw;
 }
 .card.-archive {
   display: flex;
   gap: 20px;
 }
 .card__img > img {
-  max-width: 20vw;
-  max-height: 40vh;
+  max-width: 18vw;
+  height: 50vh;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .card__title {
   margin: 0;
 }
-.card__link {
-  display: flex;
-  justify-content: center;
+.card_link {
+  margin-top: 20px;
 }
 .card_info {
   display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 
@@ -153,8 +154,8 @@ input[type=submit], button, .card__link, .wp-block-file__button {
   grid-template-columns: 1fr 1fr;
   gap: 5vh;
 }
-.grid .-archive {
-  padding: 5vw 5vh;
+.grid.-archive_grid {
+  padding: 4vw 5vh;
 }
 
 h1, h2, h3, h4 {
