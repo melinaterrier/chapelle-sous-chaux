@@ -1,7 +1,7 @@
 <?php
 get_header();?>
-<h1><?php the_title()?></h1>
 <?php if (have_posts()) : ?>
+    <h1><?php the_title()?></h1>
 <?php while (have_posts()) : the_post(); ?>
 <div class="post">
 <div class="post-content">
@@ -59,6 +59,26 @@ if (is_page( 'Liste des démarches' ) ) {?>
 </div>
 <?php
 endwhile;
+else : ?>
+    <div class="main-column">
+	<h2 class="page-title"><?php esc_html_e( 'Aucun résultat', 'chapelle' ); ?></h2>
+	<?php
+	if ( is_search() ) {
+		echo '<p>' . esc_html_e( 'Désolé, mais aucun résultat ne correspond à vos termes de recherche. Veuillez réessayer avec des mots clés différents.', 'chapelle' ) . '</p>';
+	} else {
+		echo '<p>' . esc_html_e( 'Il semble que nous ne trouvons pas ce que vous recherchez. Peut-être que la recherche peut aider.', 'chapelle' ) . '</p>';
+	} ?>
+
+	<div class="searchFormPage">
+		<form class="searchFormPage__form" action="<?php echo esc_url( site_url() ); ?>" method="get">
+			<input class="searchForm__input" type="search" name="s" placeholder="Rechercher…" value="<?php the_search_query(); ?>">
+			<button class="searchFormPage__submit btn -dark" type="submit">
+				Rechercher
+			</button>
+		</form>
+	</div>
+</div>  <?php
+
 endif;
 get_footer();
 
